@@ -13,7 +13,7 @@
 //$base-background-color:#fff;
 //$base-font-size:16px ;
 //$base-font-color:#333 ;
-//$base-link-color:#133E8D ;
+$base-link-color:#3AA0B4 ;
 //$base-container-width:1500px ;
 //$btn-background-color:green ;
 //$font-primary: Arial ; // main font
@@ -28,7 +28,7 @@
 //$search-link:#333 ;
 
 // mainNav.scss
-//$main-nav-background:#133E8D ;
+$main-nav-background:#265370 ;
 //$main-nav-link:#fff ;
 
 //footer.scss
@@ -75,12 +75,12 @@
 //$content-border-color:#ddd;
 
 // section backgrounds
-//$sectionHeader-background-color:lighten($base-background-color, 3%) ;
-//$sectionOne-background-color:darken($base-background-color, 5%) ;
-//$sectionTwo-background-color:darken($base-background-color, 10%) ;
-//$sectionThree-background-color:lighten($base-background-color, 3%) ;
-//$sectionFour-background-color:lighten($base-background-color, 5%) ;
-//$sectionFive-background-color:darken($base-background-color, 5%) ;
+//$sectionHeader-background-color:transparent; ;
+$sectionOne-background-color:transparent ;
+$sectionTwo-background-color:#F0F6F8 ;
+$sectionThree-background-color:transparent ;
+$sectionFour-background-color:#F0F6F8 ;
+$sectionFive-background-color:transparent ;
 
 //iconlinks
 //$iconLinkIconColor:#FFC82E;
@@ -95,7 +95,7 @@ $news-pod-back:#ffffff ;
 $news-pod-border-color:#ddd;
 
 //accordion
-$accordion-color:green;
+$accordion-color:$base-link-color;
 //$accordion-border-color:#ECF0F1;
 
 @import 'mixins';
@@ -110,12 +110,12 @@ $accordion-color:green;
 @import 'promo';
 @import 'carousel';
 //@import 'socialMedia';
-//@import 'sideNavigation';
+@import 'sideNavigation';
 //@import 'blockLinks';
 @import 'accordion';
 @import 'promoGroup';
 @import 'alerts';
-@import 'promoListwebpart';
+//@import 'promoListwebpart';
 //@import 'eventsWebparts';
 @import 'sharepointOverides';
 @import 'iconLinks';
@@ -123,11 +123,7 @@ $accordion-color:green;
 @import 'news';
 @import 'polaroids';
 @import 'groupPromo';
-@import 'blocklinks';
+//@import 'blocklinks';
 @import 'contentLink';
 
-
-
-
-
-
+@import 'myfuture';
