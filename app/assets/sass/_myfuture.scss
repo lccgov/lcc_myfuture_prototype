@@ -200,6 +200,7 @@ footer.main {
 
             img{
                 display:none;
+                width:auto !important;
             }
 
             span.info{
@@ -1927,4 +1928,12 @@ p.highlight{
 //breadcrumb
 .breadcrumb ul{
     padding:0;
+}
+
+
+//bug fixes
+
+.listWebpart ul li img {
+    width: auto !important;
+    margin-bottom: 0 !important;
 }

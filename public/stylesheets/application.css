@@ -1,7 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.three-columns {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px; }
+  @media (max-width: 990px) {
+    .three-columns {
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2; } }
+  @media (max-width: 767px) {
+    .three-columns {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; } }
+
+.two-columns {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px; }
+  @media (max-width: 767px) {
+    .two-columns {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; } }
+
 /*********************************************
 Base.sass variables
 *********************************************/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body {
   font-size: 16px;
   font-family: Arial;
@@ -403,6 +434,9 @@ CAROUSEL BOOTSTRAP
 .carousel #carouselButtons button {
   background: #fff; }
 
+.carousel-inner .item {
+  padding: 0px; }
+
 /*END CAROUSEL BOOTSTRAP*/
 .sideNav {
   padding: 10px 20px 20px;
@@ -446,12 +480,12 @@ ul.accordion {
       ul.accordion li a.header:after {
         font-family: FontAwesome;
         font-size: 18px;
-        content: "\f078";
+        content: "\f067";
         position: absolute;
         right: 10px;
         color: #3AA0B4; }
-    ul.accordion li.active a:after {
-      content: "\f077"; }
+      ul.accordion li a.header.active:after {
+        content: "\f068"; }
     ul.accordion li div div {
       padding: 15px; }
       ul.accordion li div div li {
@@ -726,6 +760,54 @@ hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
 #pageStatusBar[class], .ms-status-msg {
   margin-bottom: 0px; }
 
+.carousel-inner .item {
+  padding: 0px; }
+
+.col-md-8 .ms-srch-item {
+  width: 100%;
+  overflow: visible;
+  margin: 10px 0px 10px 0px; }
+
+.col-md-8 h3.ms-srch-ellipsis {
+  white-space: normal;
+  overflow: visible;
+  display: inline; }
+
+.col-md-8 #SearchBox {
+  border: 1px solid #ddd;
+  padding: 10px 10px 0 10px;
+  width: 100%; }
+  .col-md-8 #SearchBox .ms-srch-sbLarge > .ms-srch-sb-searchLink {
+    float: right; }
+
+.col-md-8 .ms-srch-sb-borderFocused {
+  border: none !important;
+  width: 100%; }
+
+.col-md-8 .ms-srch-item-body {
+  overflow: visible;
+  display: inline-block;
+  width: 100%; }
+
+.col-md-8 .ms-srch-item-icon {
+  margin-bottom: 10px; }
+
+.col-md-8 #UpScopeLinkTop {
+  width: 100% !important; }
+
+.col-md-8 .ms-srch-item-path {
+  width: 100%; }
+
+.col-md-8 .ms-promlink-button-image {
+  margin: -9px 0 9px -5px; }
+
+.col-md-8 .ms-srch-sbLarge-fullWidth {
+  width: 80%; }
+
+@media (max-width: 1024px) {
+  .col-md-8 .col-md-8 .ms-srch-hover-outerContainer {
+    display: none !important; } }
+
 /* iconLinks -----------------------------------------------------------------*/
 .iconLinks ul {
   text-align: center;
@@ -741,7 +823,7 @@ hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
   border: 1px solid #DEDEDD;
   background: #fff;
   display: inline-block;
-  float: none;
+  float: none !important;
   position: relative; }
   .iconLinks li a {
     text-indent: -3000em;
@@ -794,9 +876,9 @@ hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important; }
-  .heroBanner .container {
+  .heroBanner .container-fluid {
     position: relative; }
-    .heroBanner .container h1, .heroBanner .container p.lead {
+    .heroBanner .container-fluid h1, .heroBanner .container-fluid p.lead {
       font-size: 40px;
       font-weight: 100;
       color: #fff;
@@ -805,7 +887,7 @@ hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
       line-height: 48px;
       width: 40%;
       margin: 0 0 20px 0; }
-    .heroBanner .container p {
+    .heroBanner .container-fluid p {
       font-size: 20px;
       font-weight: 100;
       color: #fff;
@@ -821,72 +903,72 @@ hr.ms-rteElement-spacer, hr.spacerTop, hr.spacerBottom {
   @media only screen and (max-width: 700px) {
     .heroBanner {
       padding: 0px; }
-      .heroBanner .container {
+      .heroBanner .container-fluid {
         padding: 30px;
         background: rgba(0, 0, 0, 0.5); }
-        .heroBanner .container h1, .heroBanner .container p.lead {
+        .heroBanner .container-fluid h1, .heroBanner .container-fluid p.lead {
           width: 100%;
           margin: 0 auto;
-          font-size: 25px;
+          font-size: 30px;
           line-height: 30px;
           background: none;
           padding: 0 20px; }
-        .heroBanner .container p {
-          font-size: 20px;
+        .heroBanner .container-fluid p {
+          font-size: 25px;
           width: 100%;
           margin: 0px auto;
           background: none; }
-        .heroBanner .container .button {
+        .heroBanner .container-fluid .button {
           position: relative;
           font-size: 20px;
           width: 100%;
           right: 0px;
           display: block; } }
 
-.sectionSubsite.news h3 {
-  border: 0px; }
-
-.sectionSubsite.news input {
-  padding: 10px;
-  height: 50px;
-  border: 1px solid #ddd; }
-
-@media only screen and (max-width: 400px) {
+.sectionSubsite.news {
+  float: left; }
+  .sectionSubsite.news h3 {
+    border: 0px; }
   .sectionSubsite.news input {
-    width: 150px; } }
-
-.sectionSubsite.news a.button {
-  display: inline-block;
-  background: green;
-  border: none;
-  margin-top: 0px; }
-  .sectionSubsite.news a.button:hover {
-    background: #001a00;
-    color: #fff;
-    text-decoration: none; }
-  .sectionSubsite.news a.button:after {
-    display: none; }
-
-.sectionSubsite.news .datePickerContainer {
-  float: left;
-  width: 250px; }
-  .sectionSubsite.news .datePickerContainer:first-of-type {
-    width: 150px; }
-  .sectionSubsite.news .datePickerContainer label {
-    width: 100%; }
-  .sectionSubsite.news .datePickerContainer input {
-    width: 120px;
-    margin-bottom: 10px; }
+    padding: 10px;
+    height: 50px;
+    border: 1px solid #ddd;
+    float: left; }
   @media only screen and (max-width: 400px) {
-    .sectionSubsite.news .datePickerContainer input {
+    .sectionSubsite.news input {
       width: 150px; } }
-
-.sectionSubsite.news .accordion {
-  margin: 0px; }
-  .sectionSubsite.news .accordion a.header {
+  .sectionSubsite.news a.button {
+    display: inline-block;
+    background: green;
+    border: none;
+    margin-top: 0px;
+    float: left;
+    padding: 14px; }
+    .sectionSubsite.news a.button:hover {
+      background: #001a00;
+      color: #fff;
+      text-decoration: none; }
+    .sectionSubsite.news a.button:after {
+      display: none; }
+  .sectionSubsite.news .datePickerContainer {
+    float: left;
+    width: 250px; }
+    .sectionSubsite.news .datePickerContainer:first-of-type {
+      width: 150px; }
+    .sectionSubsite.news .datePickerContainer label {
+      width: 100%; }
+    .sectionSubsite.news .datePickerContainer input {
+      width: 120px;
+      margin-bottom: 10px; }
+    @media only screen and (max-width: 400px) {
+      .sectionSubsite.news .datePickerContainer input {
+        width: 150px; } }
+  .sectionSubsite.news .accordion {
     margin: 0px; }
-  .sectionSubsite.news .accordion li div div {
-    padding: 0px; }
+    .sectionSubsite.news .accordion a.header {
+      margin: 0px; }
+    .sectionSubsite.news .accordion li div div {
+      padding: 0px; }
 
 #paging h2 {
   font-size: 40px;
@@ -998,176 +1080,203 @@ POLAROID WEBPART
 
 /*END POLAROID SECTION*/
 .groupPromo .listWebpart {
+  margin: 0;
+  padding: 0; }
+
+.groupPromo ul {
   background: transparent;
-  color: #333;
-  max-width: 100%;
-  padding: 15px 7.5px 0px; }
-  .groupPromo .listWebpart h2 {
-    color: #333; }
-  .groupPromo .listWebpart a {
-    background: rgba(18, 18, 18, 0);
-    color: #333; }
-    .groupPromo .listWebpart a:hover {
-      background: transparent; }
-  .groupPromo .listWebpart h2 {
-    margin: 0 7.5px 15px;
-    display: inline-block; }
-  .groupPromo .listWebpart ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px; }
-    .groupPromo .listWebpart ul li {
-      float: left; }
-      .groupPromo .listWebpart ul li a {
-        margin: 0 7.5px 15px;
-        padding: 15px;
-        display: block;
-        font-weight: bold;
-        position: relative;
-        width: auto; }
-        .groupPromo .listWebpart ul li a img {
-          width: 100%;
-          max-width: 100%;
-          margin-bottom: 15px; }
-        .groupPromo .listWebpart ul li a:hover {
-          text-decoration: none; }
-      .col-lg-12 .groupPromo .listWebpart ul li {
-        width: 20%; }
-      .col-md-8 .groupPromo .listWebpart ul li {
-        width: 33.333%; }
-      .col-md-6 .groupPromo .listWebpart ul li {
-        width: 25%; }
-      .col-md-4 .groupPromo .listWebpart ul li {
-        width: 50%; }
-      @media only screen and (max-width: 990px) {
-        .col-lg-12 .groupPromo .listWebpart ul li,
-        .col-md-8 .groupPromo .listWebpart ul li,
-        .col-md-6 .groupPromo .listWebpart ul li,
-        .col-md-4 .groupPromo .listWebpart ul li {
-          width: 33.333%; } }
-      @media only screen and (max-width: 700px) {
-        .col-lg-12 .groupPromo .listWebpart ul li,
-        .col-md-8 .groupPromo .listWebpart ul li,
-        .col-md-6 .groupPromo .listWebpart ul li,
-        .col-md-4 .groupPromo .listWebpart ul li {
-          width: 50%; } }
-      @media only screen and (max-width: 350px) {
-        .col-lg-12 .groupPromo .listWebpart ul li,
-        .col-md-8 .groupPromo .listWebpart ul li,
-        .col-md-6 .groupPromo .listWebpart ul li,
-        .col-md-4 .groupPromo .listWebpart ul li {
-          width: 100%; } }
-  .groupPromo .listWebpart a.ask {
-    background: #B10042;
-    border-color: #B10042;
-    color: #fff; }
-    .groupPromo .listWebpart a.ask:hover {
-      background: #7e002f; }
-  .groupPromo .listWebpart a.arrow {
-    padding-right: 30px; }
-    .groupPromo .listWebpart a.arrow:after {
-      font-family: FontAwesome;
-      font-size: 25px;
-      content: "\f105";
-      display: inline-block;
-      right: 10px;
-      top: 42%;
-      position: absolute; }
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-direction: row;
+  -moz-box-flex-direction: row;
+  -ms-flex-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -moz-box-flex-wrap: wrap;
+  -ms-flex-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 10px 0 30px -6px;
+  width: auto;
+  border: 0; }
+  @media (max-width: 600px) {
+    .groupPromo ul {
+      margin: 10px 0 30px; } }
+  .groupPromo ul li {
+    background: #F6F7FA;
+    border: 0;
+    width: calc(100% * (1/4) - 5px) !important;
+    margin: 5px 0 0 5px;
+    border: 0; }
+    .col-md-8 .groupPromo ul li {
+      width: calc(100% * (1/3) - 5px) !important; }
+    .col-md-6 .groupPromo ul li {
+      width: calc(100% * (1/2) - 5px) !important; }
+    .col-md-4 .groupPromo ul li {
+      width: calc(100% * (1/2) - 5px) !important; }
+    @media (max-width: 1200px) {
+      .groupPromo ul li {
+        width: calc(100% * (1/2) - 5px) !important; }
+        .col-md-8 .groupPromo ul li, .col-md-6 .groupPromo ul li {
+          width: calc(100% * (1/2) - 5px) !important; }
+        .col-md-4 .groupPromo ul li {
+          width: calc(100%) !important; } }
+    @media (max-width: 990px) and (min-width: 601px) {
+      .col-md-4 .groupPromo ul li {
+        width: calc(100% * (1/2) - 5px) !important; } }
+    @media (max-width: 600px) {
+      .groupPromo ul li {
+        width: calc(100%) !important;
+        margin: 5px 0 0; }
+        .col-md-8 .groupPromo ul li, .col-md-6 .groupPromo ul li, .col-md-4 .groupPromo ul li {
+          width: calc(100%) !important; } }
+    .groupPromo ul li a {
+      background: #F6F7FA;
+      padding: 30px;
+      text-decoration: none !important;
+      height: 100%;
+      margin: 0;
+      display: block;
+      position: relative;
+      width: auto; }
+      .groupPromo ul li a img {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px; }
+      .groupPromo ul li a:hover, .groupPromo ul li a:active {
+        background: #e6e8f1; }
+      @media (max-width: 767px) {
+        .groupPromo ul li a {
+          min-height: 0;
+          padding: 20px; } }
+      @media (max-width: 600px) {
+        .groupPromo ul li a {
+          min-height: 0;
+          padding: 20px 15px; } }
+      .groupPromo ul li a h3 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 24px;
+        color: #3D414A;
+        padding-right: 30px;
+        line-height: 28px;
+        position: relative; }
+        @media (max-width: 767px) {
+          .groupPromo ul li a h3 {
+            font-size: 19px;
+            line-height: 24px; } }
+        .groupPromo ul li a h3:after {
+          content: '\f105';
+          font-family: FontAwesome;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          color: #9DA5B2; }
+          @media (max-width: 767px) {
+            .groupPromo ul li a h3:after {
+              top: 20px;
+              right: 20px; } }
+          @media (max-width: 600px) {
+            .groupPromo ul li a h3:after {
+              top: 50%;
+              right: 15px;
+              margin-top: -10px;
+              font-size: 34px; } }
+      .groupPromo ul li a p {
+        font-size: 18px;
+        font-weight: 300;
+        margin-top: 10px;
+        margin-bottom: 0;
+        color: #666B76; }
+        @media (max-width: 600px) {
+          .groupPromo ul li a p {
+            padding-right: 30px;
+            font-size: 16px;
+            margin-top: 5px; } }
+    .groupPromo ul li.external a h3:after {
+      content: '\f08e'; }
 
-.groupPromo.blockLinksGreen .listWebpart {
-  background: #97BD0E;
-  color: #fff; }
-  .groupPromo.blockLinksGreen .listWebpart h2 {
-    color: #fff; }
-  .groupPromo.blockLinksGreen .listWebpart a {
-    background: #b2de10;
-    color: #fff; }
-    .groupPromo.blockLinksGreen .listWebpart a:hover {
-      background: #718e0a; }
+.groupPromo.blockLinksGreen .listWebpart ul li {
+  background: #97BD0E; }
+  .groupPromo.blockLinksGreen .listWebpart ul li a {
+    background: #97BD0E; }
+    .groupPromo.blockLinksGreen .listWebpart ul li a:hover, .groupPromo.blockLinksGreen .listWebpart ul li a:active {
+      background: #84a50c; }
+    .groupPromo.blockLinksGreen .listWebpart ul li a h3 {
+      color: #fff; }
+      .groupPromo.blockLinksGreen .listWebpart ul li a h3:after {
+        color: #fff; }
+    .groupPromo.blockLinksGreen .listWebpart ul li a p {
+      color: #fff; }
 
-.groupPromo.blockLinksPurple .listWebpart {
-  background: #72286E;
-  color: #fff; }
-  .groupPromo.blockLinksPurple .listWebpart h2 {
-    color: #fff; }
-  .groupPromo.blockLinksPurple .listWebpart a {
-    background: #8c3188;
-    color: #fff; }
-    .groupPromo.blockLinksPurple .listWebpart a:hover {
-      background: #4c1b4a; }
+.groupPromo.blockLinksPurple .listWebpart ul li {
+  background: #72286E; }
+  .groupPromo.blockLinksPurple .listWebpart ul li a {
+    background: #72286E; }
+    .groupPromo.blockLinksPurple .listWebpart ul li a:hover, .groupPromo.blockLinksPurple .listWebpart ul li a:active {
+      background: #5f215c; }
+    .groupPromo.blockLinksPurple .listWebpart ul li a h3 {
+      color: #fff; }
+      .groupPromo.blockLinksPurple .listWebpart ul li a h3:after {
+        color: #fff; }
+    .groupPromo.blockLinksPurple .listWebpart ul li a p {
+      color: #fff; }
 
-.groupPromo.blockLinksPink .listWebpart {
-  background: #B10042;
-  color: #fff; }
-  .groupPromo.blockLinksPink .listWebpart h2 {
-    color: #fff; }
-  .groupPromo.blockLinksPink .listWebpart a {
-    background: #d5004f;
-    color: #fff; }
-    .groupPromo.blockLinksPink .listWebpart a:hover {
-      background: #7e002f; }
+.groupPromo.blockLinksPink .listWebpart ul li {
+  background: #B10042; }
+  .groupPromo.blockLinksPink .listWebpart ul li a {
+    background: #B10042; }
+    .groupPromo.blockLinksPink .listWebpart ul li a:hover, .groupPromo.blockLinksPink .listWebpart ul li a:active {
+      background: #980038; }
+    .groupPromo.blockLinksPink .listWebpart ul li a h3 {
+      color: #fff; }
+      .groupPromo.blockLinksPink .listWebpart ul li a h3:after {
+        color: #fff; }
+    .groupPromo.blockLinksPink .listWebpart ul li a p {
+      color: #fff; }
 
-.groupPromo.midnightBlue .listWebpart {
-  background: transparent;
-  color: #fff; }
-  .groupPromo.midnightBlue .listWebpart h2 {
-    color: #fff; }
-  .groupPromo.midnightBlue .listWebpart a {
-    background: rgba(18, 18, 18, 0);
-    color: #fff; }
-    .groupPromo.midnightBlue .listWebpart a:hover {
-      background: transparent; }
-  .groupPromo.midnightBlue .listWebpart h2 {
-    color: #333; }
-  .groupPromo.midnightBlue .listWebpart a {
+.groupPromo.midnightBlue .listWebpart ul li {
+  background: #2c3e50; }
+  .groupPromo.midnightBlue .listWebpart ul li a {
     background: #2c3e50; }
-    .groupPromo.midnightBlue .listWebpart a:hover {
-      background: #161f29; }
+    .groupPromo.midnightBlue .listWebpart ul li a:hover, .groupPromo.midnightBlue .listWebpart ul li a:active {
+      background: #233140; }
+    .groupPromo.midnightBlue .listWebpart ul li a h3 {
+      color: #fff; }
+      .groupPromo.midnightBlue .listWebpart ul li a h3:after {
+        color: #fff; }
+    .groupPromo.midnightBlue .listWebpart ul li a p {
+      color: #fff; }
 
-.groupPromo.carrot .listWebpart {
-  background: transparent;
-  color: #fff; }
-  .groupPromo.carrot .listWebpart h2 {
-    color: #fff; }
-  .groupPromo.carrot .listWebpart a {
-    background: rgba(18, 18, 18, 0);
-    color: #fff; }
-    .groupPromo.carrot .listWebpart a:hover {
-      background: transparent; }
-  .groupPromo.carrot .listWebpart h2 {
-    color: #333; }
-  .groupPromo.carrot .listWebpart a {
+.groupPromo.carrot .listWebpart ul li {
+  background: #e67e22; }
+  .groupPromo.carrot .listWebpart ul li a {
     background: #e67e22; }
-    .groupPromo.carrot .listWebpart a:hover {
-      background: #b66015; }
+    .groupPromo.carrot .listWebpart ul li a:hover, .groupPromo.carrot .listWebpart ul li a:active {
+      background: #d67118; }
+    .groupPromo.carrot .listWebpart ul li a h3 {
+      color: #fff; }
+      .groupPromo.carrot .listWebpart ul li a h3:after {
+        color: #fff; }
+    .groupPromo.carrot .listWebpart ul li a p {
+      color: #fff; }
 
-.groupPromo.white .listWebpart {
-  background: #fff;
-  color: #333; }
-  .groupPromo.white .listWebpart h2 {
-    color: #333; }
-  .groupPromo.white .listWebpart a {
-    background: white;
-    color: #333; }
-    .groupPromo.white .listWebpart a:hover {
-      background: #e6e6e6; }
-  .groupPromo.white .listWebpart a {
-    background: #f2f4f3; }
-
-.groupPromo.default .listWebpart {
-  background: transparent;
-  color: #333; }
-  .groupPromo.default .listWebpart h2 {
-    color: #333; }
-  .groupPromo.default .listWebpart a {
-    background: rgba(18, 18, 18, 0);
-    color: #333; }
-    .groupPromo.default .listWebpart a:hover {
-      background: transparent; }
-  .groupPromo.default .listWebpart a {
-    border: 1px solid #ddd; }
-    .groupPromo.default .listWebpart a:hover {
-      background: #ddd; }
+.groupPromo.white .listWebpart ul li {
+  background: #fff; }
+  .groupPromo.white .listWebpart ul li a {
+    background: #fff; }
+    .groupPromo.white .listWebpart ul li a:hover, .groupPromo.white .listWebpart ul li a:active {
+      background: #f2f2f2; }
+    .groupPromo.white .listWebpart ul li a h3 {
+      color: #333; }
+      .groupPromo.white .listWebpart ul li a h3:after {
+        color: #333; }
+    .groupPromo.white .listWebpart ul li a p {
+      color: #333; }
 
 .contentLink ul {
   margin: 0px;
@@ -1332,7 +1441,8 @@ footer.main {
       padding: 0;
       min-height: 0; }
       .blockLink a img {
-        display: none; }
+        display: none;
+        width: auto !important; }
       .blockLink a span.info {
         position: relative;
         width: 100%;
@@ -2499,3 +2609,10 @@ p.highlight {
 .iconLinks h2,
 .promoListWebpart h2 {
   text-align: center; }
+
+.breadcrumb ul {
+  padding: 0; }
+
+.listWebpart ul li img {
+  width: auto !important;
+  margin-bottom: 0 !important; }
