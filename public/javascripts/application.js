@@ -17,3 +17,7 @@ jQuery(document).ready(function($){
 		});
 	});
 });
+
+var backLink = '<div class="top-nav"><div class="container-fluid"><div class="row"><a href="/"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="top-nav--logo"></span><span class="sr-only">Go to my future website</span></a></div></div></div>'
+
+$("body").prepend(backLink);

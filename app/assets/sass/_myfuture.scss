@@ -862,7 +862,7 @@ hr.spacer-middle{
         background:$red;
     }
     &.blue{
-        background:&blue;
+        background:$blue;
     }
 
     &.turquoise,
@@ -1873,7 +1873,7 @@ p.highlight{
 .top-nav{
     width:100%;
     top:0;
-    background:#fff;
+    background:#F8FAFA;
     max-height:38px;
 
     @media (max-width: 990px){
@@ -1912,10 +1912,19 @@ p.highlight{
     background-image: url(../images/logo-top.png);
 }
 
+.top-nav{
+    display:none;
+}
+
 //section headings
 .iconLinks, 
 .promoListWebpart {
     h2{
         text-align:center;
     }
+}
+
+//breadcrumb
+.breadcrumb ul{
+    padding:0;
 }

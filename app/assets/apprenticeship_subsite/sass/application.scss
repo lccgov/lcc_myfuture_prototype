@@ -107,7 +107,7 @@ $accordion-color:$base-link-color;
 //@import 'mainMenuSubsites';
 @import 'breadcrumb';
 @import 'sectionSubsite';
-@import 'promo';
+//@import 'promo';
 @import 'carousel';
 //@import 'socialMedia';
 @import 'sideNavigation';
@@ -157,4 +157,8 @@ $accordion-color:$base-link-color;
         border-bottom: 5px solid #F0F6F8;
     }
 
+}
+
+.top-nav{
+    display:block;
 }
