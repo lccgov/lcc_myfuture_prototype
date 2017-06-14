@@ -1322,18 +1322,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #265370; }
 
 h1 {
-  font-size: 70px;
-  margin: 50px 0; }
+  font-size: 70px; }
   @media (max-width: 767px) {
     h1 {
-      font-size: 50px;
-      margin: 30px 0; } }
+      font-size: 50px; } }
   @media (max-width: 600px) {
     h1 {
       font-size: 3.125em; } }
 
 h2 {
-  margin: 0 0 40px;
   padding: 0px;
   font-size: 60px; }
   @media (max-width: 767px) {
@@ -2592,7 +2589,7 @@ p.highlight {
     background-repeat: no-repeat;
     display: block;
     width: 225px;
-    height: 27px;
+    height: 30px;
     float: left; }
   .top-nav .glyphicon {
     margin: 2px 5px 0 0;
@@ -2608,7 +2605,8 @@ p.highlight {
 
 .iconLinks h2,
 .promoListWebpart h2 {
-  text-align: center; }
+  text-align: center;
+  margin-top: 0; }
 
 .breadcrumb ul {
   padding: 0; }
@@ -2616,6 +2614,46 @@ p.highlight {
 .listWebpart ul li img {
   width: auto !important;
   margin-bottom: 0 !important; }
+
+.iconLinks li {
+  -webkit-box-shadow: 5px 5px 0px 0px #ccd1d3;
+  -moz-box-shadow: 5px 5px 0px 0px #ccd1d3;
+  box-shadow: 5px 5px 0px 0px #ccd1d3;
+  border: none; }
+  .iconLinks li.facebook a:after {
+    color: #265370; }
+  .iconLinks li.twitter a:after {
+    color: #44bcd3; }
+  .iconLinks li.youtube a:after {
+    color: #ee5346; }
+  .iconLinks li.linkedin a:after {
+    color: #0077b5; }
+
+.breadcrumb ul li {
+  font-family: 'BebasNeuewebfont', 'Open Sans', sans-serif !important; }
+  .breadcrumb ul li a:hover {
+    text-decoration: none;
+    color: #2e7e8d !important; }
+
+a:visited {
+  color: #3AA0B4; }
+
+.cd-timeline-content h2 {
+  text-align: left !important; }
+
+section.promo a.btn {
+  margin: 20px 0 0; }
+  @media (min-width: 990px) {
+    section.promo a.btn {
+      margin: 0; } }
+
+@media (max-width: 991px) {
+  section.promo p {
+    margin: 0; } }
+
+@media (max-width: 990px) {
+  hr.ms-rteElement-spacer, hr.spacer-top {
+    margin-top: 30px; } }
 
 @font-face {
   font-family: 'BebasNeuewebfont';
@@ -2642,3 +2680,9 @@ p.highlight {
 
 .top-nav {
   display: block; }
+
+.cd-timeline-img p {
+  line-height: 1; }
+  @media (min-width: 500px) {
+    .cd-timeline-img p {
+      font-size: 1.2em; } }

@@ -162,3 +162,14 @@ $accordion-color:$base-link-color;
 .top-nav{
     display:block;
 }
+
+//BUG FIXES ------------
+
+//timeline
+.cd-timeline-img p {
+    line-height:1;
+
+    @media (min-width: 500px){
+        font-size: 1.2em;
+    }
+}
