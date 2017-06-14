@@ -1999,10 +1999,18 @@ section.promo a.btn{
 
 //spacer fix for responsive
 @media (max-width: 990px){
-    hr.ms-rteElement-spacer, hr.spacer-top {
+    hr.ms-rteElement-spacer, 
+    hr.spacer-top {
         margin-top: 30px;
     }
     hr.spacer-bottom {
         margin-bottom: 30px;
     }
 }
+
+hr.ms-rteElement-spacer, 
+hr.spacer-top, 
+hr.spacer-bottom{
+    padding-bottom:0;
+}
+
