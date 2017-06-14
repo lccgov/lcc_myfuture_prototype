@@ -2653,4 +2653,6 @@ section.promo a.btn {
 
 @media (max-width: 990px) {
   hr.ms-rteElement-spacer, hr.spacer-top {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  hr.spacer-bottom {
+    margin-bottom: 30px; } }
