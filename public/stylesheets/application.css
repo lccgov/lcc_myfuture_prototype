@@ -2662,3 +2662,6 @@ hr.ms-rteElement-spacer,
 hr.spacer-top,
 hr.spacer-bottom {
   padding-bottom: 0; }
+
+.col-md-8 a {
+  font-weight: 700; }

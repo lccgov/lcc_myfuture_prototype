@@ -2663,6 +2663,9 @@ hr.spacer-top,
 hr.spacer-bottom {
   padding-bottom: 0; }
 
+.col-md-8 a {
+  font-weight: 700; }
+
 @font-face {
   font-family: 'BebasNeuewebfont';
   src: url("../../fonts/BebasNeuewebfont.eot");
